@@ -1,5 +1,6 @@
 import reflex as rx
 from alejoide.styles.colors import Color, TextColor
+from alejoide.styles import styles
 from alejoide.modules.constants import App, Links
 from alejoide.styles.sizes import Size
 
@@ -23,16 +24,19 @@ def header() -> rx.Component:
                 font_size=Size.MEDIUM.value,
             ),
             rx.image(
-                src="me.jpeg",
+                src="./me.jpeg",
                 alt="Foto personal de Alejo Sarmiento.",
-                border_radius="full",
+                width="30em",
+                height="auto",
+                border_radius="50%",
+                overflow="hidden",
                 border=f"{Size.XSMALL.value} solid {Color.TERCEARY.value} ",
-                width="35em",
-                height="35em"
+                object_fit="cover",
             ),
-            justify_content="space-between",
-            align_items="center",
             padding_top=Size.XXLARGE.value,
-            width="80%",
+            align_items="center",
+            justify_content="space-between",
+            flex_wrap="wrap",
+            style=styles.WIDTH_STYLE,
         )
     )

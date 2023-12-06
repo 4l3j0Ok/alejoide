@@ -1,19 +1,17 @@
 import reflex as rx
-from alejoide.styles.colors import Color, TextColor
 from alejoide.modules.constants import App, Links
+from alejoide.styles.colors import Color, TextColor
 from alejoide.styles.sizes import Size
+from alejoide.styles import styles
 
 
 def buttons() -> rx.Component:
     return rx.hstack(
-        rx.flex(
-            rx.link("Inicio", href=Links.HOME.value),
-            rx.link("Sobre mí", href=Links.ABOUT.value),
-            rx.link("Proyectos", href=Links.PROJECTS.value),
-            rx.link("Contacto", href=Links.CONTACT.value),
-            gap=Size.LARGE.value,
-        ),
-        font_size=Size.NORMAL.value
+        rx.link("Inicio", href=Links.HOME.value),
+        rx.link("Sobre mí", href=Links.ABOUT.value),
+        rx.link("Proyectos", href=Links.PROJECTS.value),
+        rx.link("Contacto", href=Links.CONTACT.value),
+        gap=Size.LARGE.value,
     )
 
 
@@ -25,17 +23,17 @@ def navbar() -> rx.Component:
                     href=Links.HOME.value,
                     font_size=Size.MEDIUM.value,
                     font_weight="semibold",
-                    letter_spacing=Size.XSMALL.value,
-                )
+                    letter_spacing=Size.XSMALL.value
+                ),
             ),
             rx.box(
-                rx.spacer(),
-                buttons(),
-                padding=Size.NORMAL.value
+                buttons()
             ),
             justify_content="space-between",
             align_items="center",
-            width="80%",
+            flex_wrap="wrap",
+            style=styles.WIDTH_STYLE,
         ),
         background_color=Color.SECONDARY.value,
+        padding_y=Size.NORMAL.value,
     )

@@ -1,5 +1,5 @@
 from enum import Enum
 
 
-class Fonts(Enum):
+class Font(Enum):
     DEFAULT = "Montserrat"
