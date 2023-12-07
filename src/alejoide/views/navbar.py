@@ -26,9 +26,7 @@ def navbar() -> rx.Component:
                     letter_spacing=Size.XSMALL.value
                 ),
             ),
-            rx.box(
-                buttons()
-            ),
+            buttons(),
             justify_content="space-between",
             align_items="center",
             flex_wrap="wrap",
@@ -36,4 +34,6 @@ def navbar() -> rx.Component:
         ),
         background_color=Color.SECONDARY.value,
         padding_y=Size.NORMAL.value,
+        position="sticky",
+        top=0
     )
