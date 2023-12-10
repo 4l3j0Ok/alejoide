@@ -11,4 +11,4 @@ class TextColor(Enum):
     ACCENT = "#5BFFE2"
     PRIMARY = "#FFFFFF"
     SECONDARY = "#160D18"
-    TERCEARY = "#221525"
+    TERCEARY = "#00A2C5"

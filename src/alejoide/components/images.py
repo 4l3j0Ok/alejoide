@@ -6,7 +6,7 @@ from alejoide.styles.colors import Color
 def profile(
         asset: str,
         alt_text: str = "",
-        border_size: Size = Size.XSMALL.value,
+        border_size: Size = Size.XXSMALL.value,
         border_color: Color = Color.TERCEARY.value
     ) -> rx.Component:
     return rx.image(

@@ -21,19 +21,12 @@ def navbar() -> rx.Component:
             rx.box(
                 rx.link(App.NAME.value.upper(),
                     href=Links.HOME.value,
-                    font_size=Size.MEDIUM.value,
+                    font_size=Size.LARGE.value,
                     font_weight="semibold",
-                    letter_spacing=Size.XSMALL.value
+                    letter_spacing=Size.XXSMALL.value
                 ),
             ),
             buttons(),
-            justify_content="space-between",
-            align_items="center",
-            flex_wrap="wrap",
-            style=styles.WIDTH_STYLE,
         ),
-        background_color=Color.SECONDARY.value,
-        padding_y=Size.NORMAL.value,
-        position="sticky",
-        top=0
+        style=styles.NAVBAR_STYLE,
     )

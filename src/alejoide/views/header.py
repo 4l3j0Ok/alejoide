@@ -12,14 +12,14 @@ def title() -> rx.Component:
             "Alejo Sarmiento",
             color=TextColor.ACCENT.value,
             font_weight="bold",
-            font_size=Size.XLARGE.value
+            font_size=Size.XXLARGE.value
         ),
         rx.text(
             rx.span("SRE", font_weight="semibold"),
             rx.span(" y "),
             rx.span("Desarrollador de software", font_weight="semibold")
         ),
-        font_size=Size.MEDIUM.value,
+        font_size=Size.LARGE.value,
     )
 
 
@@ -28,10 +28,6 @@ def header() -> rx.Component:
         rx.flex(
             title(),
             images.profile("./me.jpeg", alt_text="Foto personal de Alejo Sarmiento"),
-            margin_top=Size.XXLARGE.value,
-            align_items="center",
-            justify_content="space-between",
-            flex_wrap="wrap",
-            style=styles.WIDTH_STYLE,
+            margin_top=Size.XXXLARGE.value,
         ),
     )
