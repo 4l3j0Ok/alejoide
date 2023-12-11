@@ -1,32 +1,25 @@
 import reflex as rx
-from alejoide.modules.constants import App, Links
-from alejoide.styles.colors import Header, Text
+from alejoide.modules.constants import Links
 from alejoide.styles.sizes import Size
-from alejoide.styles import styles
+from alejoide.styles import styles, colors
+from alejoide.components.logo import logo
 
 
 def buttons() -> rx.Component:
     return rx.hstack(
-        rx.link("Inicio", href=Links.HOME.value),
-        rx.link("Sobre mí", href=Links.ABOUT.value),
+        rx.link("Inicio", href=Links.HOME.value, style=styles.DARK_LINKS),
+        rx.link("Sobre mí", href=Links.ABOUT.value, style=styles.DARK_LINKS),
         # rx.link("Proyectos", href=Links.PROJECTS.value),
-        rx.link("Contacto", href=Links.CONTACT.value),
+        rx.link("Contacto", href=Links.CONTACT.value, style=styles.DARK_LINKS),
         gap=Size.LARGE.value,
     )
 
 
 def navbar() -> rx.Component:
-    return rx.vstack(
+    return rx.hstack(
         rx.flex(
-            rx.box(
-                rx.link(App.NAME.value.upper(),
-                    href=Links.HOME.value,
-                    font_size=Size.LARGE.value,
-                    font_weight="semibold",
-                    letter_spacing=Size.XXSMALL.value
-                ),
-            ),
-            buttons(),
+            logo(),
+            buttons()
         ),
         style=styles.NAVBAR_STYLE,
     )

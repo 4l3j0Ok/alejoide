@@ -10,6 +10,8 @@ class Links(Enum):
     ABOUT = "#about_me"
     PROJECTS = "#projects"
     CONTACT = "#contact"
+    APP_URL = "http://www.alejoide.com"
+    EMAIL = "mailto:alejofsarmiento@gmail.com"
 
 class AboutMe(Enum):
     DESCRIPTION = [

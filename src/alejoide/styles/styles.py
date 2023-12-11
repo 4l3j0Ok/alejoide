@@ -2,7 +2,6 @@ import reflex as rx
 from alejoide.styles.fonts import Font
 from alejoide.styles import colors
 from alejoide.styles.sizes import Size
-from enum import Enum
 
 # Google Fonts and Font Awesome
 STYLESHEETS = [
@@ -12,6 +11,7 @@ STYLESHEETS = [
 
 
 BASE_STYLE = {
+    "scroll_behavior": "smooth",
     "font_family": Font.DEFAULT.value,
     "font_size": Size.NORMAL.value,
     "color": colors.Text.PRIMARY.value,
@@ -26,9 +26,8 @@ BASE_STYLE = {
         "flex_wrap": "wrap",
     },
     rx.Link: {
-        "scroll_behavior": "smooth",
         ":hover": {
-            "color": colors.Text.ACCENT.value,
+            "color": colors.Main.ACCENT.value,
             "text_decoration": "none",
         },
     },
@@ -36,26 +35,41 @@ BASE_STYLE = {
         "font_family": Font.DEFAULT.value,
         "margin_y": Size.NORMAL.value,
     },
+    rx.Button: {
+        "width":"100%",
+        "background_color": colors.Main.ACCENT.value,
+        "color": colors.Text.SECONDARY.value,
+        ":hover": {
+            "background_color": colors.Main.TERCEARY.value,
+        }
+    }
+}
+
+# FOR LINKS WHERE THE BACKGROUND IS DARK
+DARK_LINKS = {
+    ":hover": {
+        "color": colors.Text.ACCENT.value,
+        "text_decoration": "none",
+    },
 }
 
 # NAVBAR STYLE
 
-NAVBAR_KEYFRAME = {
-    "to": {
-        "font_size": Size.SMALL.value,
-    }
-}
-
 NAVBAR_STYLE = {
     "background": colors.Header.SECONDARY.value,
     "color": colors.Text.SECONDARY.value,
+    "justify_content": "center",
     "padding_y": Size.LARGE.value,
     "position": "sticky",
     "top": 0,
-    "animation": "test linear both",
-    "animation-timeline": "scroll(root)",
-    "animation-range": "0 300px",
-    "@keyframes test": NAVBAR_KEYFRAME,
+    "animation": "minimize linear both",
+    "animation_timeline": "scroll(root)",
+    "animation_range": "0 300px",
+    "@keyframes minimize": {
+        "to": {
+            "font_size": Size.SMALL.value,
+        }
+    },
     "z_index": 1,
 }
 
@@ -66,4 +80,16 @@ HEADER_STYLE = {
     "justify_content": "center",
     "background": colors.Header.PRIMARY.value,
     "color": colors.Text.SECONDARY.value,
+}
+
+
+# FOOTER STYLE
+
+FOOTER_STYLE = {
+    "color": colors.Text.SECONDARY.value,
+    "background": colors.Main.TERCEARY.value,
+    "width": "100%",
+    "padding_y": Size.XXLARGE.value,
+    "padding_x": Size.LARGE.value,
+    "justify_content":"center",
 }

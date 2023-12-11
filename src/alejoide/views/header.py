@@ -24,7 +24,7 @@ def title() -> rx.Component:
 
 
 def header() -> rx.Component:
-    return rx.vstack(
+    return rx.hstack(
         rx.flex(
             title(),
             images.profile("./me.jpeg", alt_text="Foto personal de Alejo Sarmiento"),

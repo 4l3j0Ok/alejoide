@@ -9,7 +9,7 @@ class Header(Enum):
 
 
 class Main(Enum):
-    ACCENT = "#00A2C5"
+    ACCENT = "#E300D0"
     PRIMARY = "#FFFFFF"
     SECONDARY = "#160D18"
     TERCEARY = "#221525"
@@ -19,4 +19,3 @@ class Text(Enum):
     ACCENT = "#5BFFE2"
     PRIMARY = "#160D18"
     SECONDARY = "#FFFFFF"
-    TERCEARY = "#00A2C5"

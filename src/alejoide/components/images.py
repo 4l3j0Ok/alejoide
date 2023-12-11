@@ -7,7 +7,7 @@ def profile(
         asset: str,
         alt_text: str = "",
         border_size: Size = Size.XXSMALL.value,
-        border_color: colors.Main = colors.Main.TERCEARY.value
+        border_color: colors.Main = colors.Main.PRIMARY.value
     ) -> rx.Component:
     return rx.image(
         src=asset,
