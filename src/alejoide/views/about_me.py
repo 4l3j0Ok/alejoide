@@ -2,10 +2,11 @@ import reflex as rx
 from alejoide.styles.sizes import Size
 from alejoide.modules.constants import AboutMe
 from alejoide.components.cards import card
+from alejoide.styles import styles
 
 
 
-def cards() -> rx.Component:
+def cards(**args) -> rx.Component:
     cards = []
     for item in AboutMe.CARDS.value:
         cards.append(
@@ -16,7 +17,7 @@ def cards() -> rx.Component:
             )
         )
     return rx.responsive_grid(
-        *[rx.box(card) for card in cards],
+        *[rx.box(card, **args) for card in cards],
         columns=[2],
         spacing=Size.LARGE.value,
         )
@@ -40,7 +41,7 @@ def about_me() -> rx.Component:
                     "Mis áreas de trabajo",
                     size="lg",
                 ),
-                cards()
+                cards(style=styles.ABOUT_ME_CARDS),
             )
         ),
         id="about_me",

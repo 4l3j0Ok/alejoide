@@ -17,7 +17,6 @@ class FormState(rx.State):
         async with self:
             self.form_data = form_data
             self.loading = True
-        print(form_data)
         success = send_mail(form_data)
         if success:
             async with self:

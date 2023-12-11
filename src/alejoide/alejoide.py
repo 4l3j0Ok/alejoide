@@ -8,6 +8,7 @@ from alejoide.styles import styles
 from alejoide.styles.sizes import Size
 
 
+@rx.page(route="/", title="Alejoide")
 def index() -> rx.Component:
     return rx.box(
         rx.script(src="https://kit.fontawesome.com/ed6fce8479.js"),
@@ -28,5 +29,4 @@ app = rx.App(
     style=styles.BASE
 )
 
-app.add_page(index)
 app.compile()

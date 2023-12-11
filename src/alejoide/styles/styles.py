@@ -71,7 +71,7 @@ NAVBAR = {
             "font_size": Size.SMALL.value,
         }
     },
-    "z_index": 1,
+    "z_index": 2,
 }
 
 # HEADER STYLE
@@ -99,4 +99,12 @@ FOOTER = {
 FORM_COMPONENTS = {
     "width": "100%",
     "padding_y": Size.NORMAL.value,
+}
+
+ABOUT_ME_CARDS = {
+    "transition": "transform 0.2s ease-in-out",
+    "transition_delay": "0.2s",
+    ":hover": {
+        "transform": f"scale(1.05)",
+    }
 }
