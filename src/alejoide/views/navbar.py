@@ -1,6 +1,6 @@
 import reflex as rx
 from alejoide.modules.constants import App, Links
-from alejoide.styles.colors import Color, TextColor
+from alejoide.styles.colors import Header, Text
 from alejoide.styles.sizes import Size
 from alejoide.styles import styles
 
@@ -9,7 +9,7 @@ def buttons() -> rx.Component:
     return rx.hstack(
         rx.link("Inicio", href=Links.HOME.value),
         rx.link("Sobre mí", href=Links.ABOUT.value),
-        rx.link("Proyectos", href=Links.PROJECTS.value),
+        # rx.link("Proyectos", href=Links.PROJECTS.value),
         rx.link("Contacto", href=Links.CONTACT.value),
         gap=Size.LARGE.value,
     )

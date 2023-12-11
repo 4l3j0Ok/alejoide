@@ -1,13 +1,13 @@
 import reflex as rx
 from alejoide.styles.sizes import Size
-from alejoide.styles.colors import Color
+from alejoide.styles import colors
 
 
 def profile(
         asset: str,
         alt_text: str = "",
         border_size: Size = Size.XXSMALL.value,
-        border_color: Color = Color.TERCEARY.value
+        border_color: colors.Main = colors.Main.TERCEARY.value
     ) -> rx.Component:
     return rx.image(
         src=asset,
