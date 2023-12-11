@@ -17,5 +17,5 @@ def footer() -> rx.Component:
             ),
             "v1."
         ),
-        style=styles.FOOTER_STYLE,
+        style=styles.FOOTER,
     )

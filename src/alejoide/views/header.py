@@ -29,5 +29,5 @@ def header() -> rx.Component:
             title(),
             images.profile("./me.jpeg", alt_text="Foto personal de Alejo Sarmiento"),
         ),
-        style=styles.HEADER_STYLE,
+        style=styles.HEADER,
     )

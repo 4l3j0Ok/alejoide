@@ -21,5 +21,5 @@ def navbar() -> rx.Component:
             logo(),
             buttons()
         ),
-        style=styles.NAVBAR_STYLE,
+        style=styles.NAVBAR,
     )

@@ -10,7 +10,7 @@ STYLESHEETS = [
 ]
 
 
-BASE_STYLE = {
+BASE = {
     "scroll_behavior": "smooth",
     "font_family": Font.DEFAULT.value,
     "font_size": Size.NORMAL.value,
@@ -37,7 +37,6 @@ BASE_STYLE = {
         "margin_y": Size.NORMAL.value,
     },
     rx.Button: {
-        "width":"100%",
         "background_color": colors.Main.ACCENT.value,
         "color": colors.Text.SECONDARY.value,
         ":hover": {
@@ -57,7 +56,7 @@ DARK_LINKS = {
 
 # NAVBAR STYLE
 
-NAVBAR_STYLE = {
+NAVBAR = {
     "background": colors.Header.SECONDARY.value,
     "color": colors.Text.SECONDARY.value,
     "justify_content": "center",
@@ -77,7 +76,7 @@ NAVBAR_STYLE = {
 
 # HEADER STYLE
 
-HEADER_STYLE = {
+HEADER = {
     "height": "95vh",
     "justify_content": "center",
     "background": colors.Header.PRIMARY.value,
@@ -87,11 +86,17 @@ HEADER_STYLE = {
 
 # FOOTER STYLE
 
-FOOTER_STYLE = {
+FOOTER = {
     "color": colors.Text.SECONDARY.value,
     "background": colors.Main.TERCEARY.value,
     "width": "100%",
     "padding_y": Size.XXLARGE.value,
     "padding_x": Size.LARGE.value,
     "justify_content":"center",
+}
+
+
+FORM_COMPONENTS = {
+    "width": "100%",
+    "padding_y": Size.NORMAL.value,
 }
