@@ -26,8 +26,9 @@ BASE_STYLE = {
         "flex_wrap": "wrap",
     },
     rx.Link: {
+        "color": colors.Main.ACCENT.value,
         ":hover": {
-            "color": colors.Main.ACCENT.value,
+            "color": colors.Text.PRIMARY.value,
             "text_decoration": "none",
         },
     },
@@ -47,6 +48,7 @@ BASE_STYLE = {
 
 # FOR LINKS WHERE THE BACKGROUND IS DARK
 DARK_LINKS = {
+    "color": colors.Text.SECONDARY.value,
     ":hover": {
         "color": colors.Text.ACCENT.value,
         "text_decoration": "none",

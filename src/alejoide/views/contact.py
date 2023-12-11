@@ -35,7 +35,8 @@ def contact() -> rx.Component:
                 rx.link(
                     Links.EMAIL.value.replace("mailto:", ""),
                     href=Links.EMAIL.value,
-                    as_="b"
+                    as_="b",
+                    color=styles.colors.Main.ACCENT.value
                 )
             )
         ),
