@@ -5,7 +5,7 @@ services:
     build:
       context: ../src
       args:
-      - API_URL=http://$VIRTUAL_HOST:8000
+      - API_URL=$API_URL
     env_file:
       - .env
     ports:
