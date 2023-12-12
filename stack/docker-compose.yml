@@ -1,0 +1,27 @@
+services:
+  app:
+    image: local/reflex-app
+    container_name: alejoide-app
+    build:
+      context: ../src
+      args:
+      - API_URL=http://$VIRTUAL_HOST:8000
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+    volumes:
+      - static:/app/.web/_static
+
+  webserver:
+    image: nginx:alpine
+    container_name: alejoide-webserver
+    ports:
+      - "80:80"
+    volumes:
+      - static:/usr/share/nginx/html
+    depends_on:
+      - app
+
+volumes:
+  static:
