@@ -4,29 +4,27 @@ from alejoide.styles import styles
 from alejoide.modules.utils import hex_to_rgba
 
 
-def input(input_id: str = "", label: str = "", placeholder: str = "", **args) -> rx.Box:
+def input(key: str = "", label: str = "", placeholder: str = "", **args) -> rx.Box:
     return rx.box(
-        rx.text(label, html_for=input_id),
+        rx.text(label, html_for=key),
         rx.input(
-            name=input_id,
+            name=key,
             placeholder=placeholder,
             focus_border_color=hex_to_rgba(colors.Main.ACCENT.value, 0.5),
             **args
-        ),
-        style=styles.FORM_COMPONENTS
+        )
     )
 
 
-def text_area(input_id: str = "", label: str = "", placeholder: str = "", **args) -> rx.Box:
+def text_area(key: str = "", label: str = "", placeholder: str = "", **args) -> rx.Box:
     return rx.box(
-        rx.text(label, html_for=input_id),
+        rx.text(label, html_for=key),
         rx.text_area(
-            name=input_id,
+            name=key,
             placeholder=placeholder,
             focus_border_color=hex_to_rgba(colors.Main.ACCENT.value, 0.5),
             **args
-        ),
-        style=styles.FORM_COMPONENTS
+        )
     )
 
 
@@ -36,5 +34,6 @@ def button(label: str = "", **args) -> rx.Button:
         class_name="button is-primary",
         variant="solid",
         style=styles.FORM_COMPONENTS,
+        color_scheme="pink",
         **args
     )

@@ -1,17 +1,25 @@
 from enum import Enum
+import os
 
 
 class App(Enum):
-    NAME = "Alejoide"
-    URL = "https://alejoide.com"
+    NAME = os.getenv("APP_NAME", "Alejoide")
+
+
+class Email(Enum):
+    ADDRESS = os.getenv("EMAIL_ADDRESS", "some@address.com")
+    TOKEN = os.getenv("EMAIL_TOKEN", "token")
+    SUBJECT = f"{App.NAME.value.upper()} | Contacto"
+    MESSAGE_HEADER = "<h1>NUEVO CONTACTO</h1>"
+
 
 class Links(Enum):
     HOME = "#"
     ABOUT = "#about_me"
     PROJECTS = "#projects"
     CONTACT = "#contact"
-    APP_URL = "http://www.alejoide.com"
-    EMAIL = "mailto:alejofsarmiento@gmail.com"
+    APP_URL = os.getenv("APP_URL", "localhost:3000")
+    EMAIL = f"mailto:{Email.ADDRESS.value}"
 
 class AboutMe(Enum):
     DESCRIPTION = [
