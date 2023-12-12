@@ -17,7 +17,7 @@ services:
     image: nginx:alpine
     container_name: alejoide-webserver
     ports:
-      - "80:80"
+      - 80:80
     volumes:
       - static:/usr/share/nginx/html
     depends_on:
