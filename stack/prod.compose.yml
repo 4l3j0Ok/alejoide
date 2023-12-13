@@ -13,7 +13,7 @@ services:
 
 
   webserver:
-    image: nginx:alpine
+    image: nginx:latest
     container_name: alejoide-webserver
     env_file:
       - ./config/.webserver.env
