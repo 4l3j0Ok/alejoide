@@ -16,7 +16,7 @@ services:
     image: nginx:alpine
     container_name: alejoide-webserver
     env_file:
-      - ./config/.app.env
+      - ./config/.webserver.env
     volumes:
       - static:/usr/share/nginx/html
     depends_on:
