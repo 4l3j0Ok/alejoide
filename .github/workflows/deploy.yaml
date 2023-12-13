@@ -19,7 +19,7 @@ jobs:
       name: Checkout
       uses: actions/checkout@master
     -
-      name: Setting up Stack
+      name: Set up Stack
       run: |
         mkdir -p $PROJECT_PATH
         cp -f ./stack/prod.compose.yml $PROJECT_PATH/docker-compose.yml
