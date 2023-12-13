@@ -23,6 +23,7 @@ jobs:
       run: |
         mkdir -p $PROJECT_PATH
         cp -f ./stack/prod.compose.yml $PROJECT_PATH/docker-compose.yml
+        mkdir -p $PROJECT_PATH/config
         echo "$APP_ENV_CONTENT" > $PROJECT_PATH/config/.app.env
         echo "$WEBSERVER_ENV_CONTENT" > $PROJECT_PATH/config/.webserver.env
       env:
