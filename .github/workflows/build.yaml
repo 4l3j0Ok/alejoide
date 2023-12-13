@@ -31,6 +31,6 @@ jobs:
         name: Build and push to Docker Hub
         uses: docker/build-push-action@v5
         with:
-          context: ./backend
+          context: ./src
           tags: ${{ steps.meta.outputs.tags }}
           push: true
