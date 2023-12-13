@@ -30,7 +30,7 @@ jobs:
       -
         name: Add env files
         run: |
-          echo "$APP_ENV_CONTENT" > ./.env
+          echo "$APP_ENV_CONTENT" > ./src/.env
         env:
           APP_ENV_CONTENT: ${{ secrets.APP_ENV_CONTENT }}
       -
