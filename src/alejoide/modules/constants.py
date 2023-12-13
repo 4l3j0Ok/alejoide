@@ -4,6 +4,7 @@ import os
 
 class App(Enum):
     NAME = os.getenv("APP_NAME", "Alejoide")
+    DESCRIPTION = os.getenv("APP_DESCRIPTION", "Alejoide, mi sitio web personal.")
 
 
 class Email(Enum):
