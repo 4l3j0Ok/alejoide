@@ -9,7 +9,7 @@ from alejoide.styles.sizes import Size
 from alejoide.modules.constants import App
 
 
-@rx.page(route="/", title=App.NAME.value.title, description=App.DESCRIPTION.value)
+@rx.page(route="/", title=App.NAME.value, description=App.DESCRIPTION.value)
 def index() -> rx.Component:
     return rx.box(
         rx.script(src="https://kit.fontawesome.com/ed6fce8479.js"),
