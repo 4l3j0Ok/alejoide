@@ -1,7 +1,6 @@
 # Stage 1: init
 FROM python:3.11 as init
 
-
 # Copy local context to `/app` inside container (see .dockerignore)
 WORKDIR /app
 COPY . .
@@ -18,7 +17,8 @@ RUN pip install -r requirements.txt
 RUN reflex init
 
 # Export static copy of frontend to /app/.web/_static
-RUN reflex export --frontend-only --no-zip
+# .env export is required to get correct values for static files.
+RUN export $(cat .env | grep -v ^# | xargs) && reflex export --frontend-only --no-zip
 
 # Copy static files out of /app to save space in backend image
 RUN mv .web/_static /tmp/_static
