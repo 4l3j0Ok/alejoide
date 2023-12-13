@@ -1,5 +1,3 @@
-ARG API_URL=http://localhost:8000
-
 # Stage 1: init
 FROM python:3.11 as init
 
@@ -34,6 +32,6 @@ WORKDIR /app
 RUN adduser --disabled-password --home /app reflex
 COPY --chown=reflex --from=init /app /app
 USER reflex
-ENV PATH="/app/.venv/bin:$PATH" API_URL=$API_URL
+ENV PATH="/app/.venv/bin:$PATH"
 
 CMD reflex run --env prod --backend-only
