@@ -73,7 +73,7 @@
 .coverage.*
 .dmypy.json
 .eggs/
-.env
+*.env
 .hypothesis/
 .installed.cfg
 .ipynb_checkpoints

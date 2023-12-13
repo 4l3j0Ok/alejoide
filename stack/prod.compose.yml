@@ -1,0 +1,34 @@
+services:
+
+  app:
+    image: alejoide/alejoide-web:latest
+    container_name: alejoide-web
+    env_file:
+      - ./config/.app.env
+    volumes:
+      - static:/app/.web/_static
+    networks:
+      - default
+      - nginx-proxy
+
+
+  webserver:
+    image: nginx:alpine
+    container_name: alejoide-webserver
+    env_file:
+      - ./config/.app.env
+    volumes:
+      - static:/usr/share/nginx/html
+    depends_on:
+      - app
+    networks:
+      - default
+      - nginx-proxy
+
+volumes:
+  static:
+
+networks:
+  nginx-proxy:
+    external:
+      name: nginx-proxy	
