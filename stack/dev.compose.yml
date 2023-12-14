@@ -1,13 +1,11 @@
 services:
   app:
-    image: local/reflex-app
+    image: alejoide/alejoide-web:latest
     container_name: alejoide-app
     build:
       context: ../src
     env_file:
       - ./config/.app.env
-    ports:
-      - 8000:8000
     volumes:
       - static:/app/.web/_static
 

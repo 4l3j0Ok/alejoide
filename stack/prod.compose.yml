@@ -2,7 +2,7 @@ services:
 
   app:
     image: alejoide/alejoide-web:latest
-    container_name: alejoide-web
+    container_name: alejoide-app
     env_file:
       - ./config/.app.env
     volumes:
