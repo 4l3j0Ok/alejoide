@@ -3,6 +3,7 @@ services:
   app:
     image: alejoide/alejoide-web:latest
     container_name: alejoide-app
+    restart: unless-stopped
     env_file:
       - ./config/.app.env
     volumes:
@@ -15,6 +16,7 @@ services:
   webserver:
     image: nginx:latest
     container_name: alejoide-webserver
+    restart: unless-stopped
     env_file:
       - ./config/.webserver.env
     volumes:
