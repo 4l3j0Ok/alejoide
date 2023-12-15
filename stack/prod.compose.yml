@@ -29,10 +29,24 @@ services:
       - nginx-proxy
 
 
+  metrics-exporter:
+    image: nginx/nginx-prometheus-exporter:latest
+    container_name: prometheus-nginx-exporter
+    restart: unless-stopped
+    command:
+      - -nginx.scrape-uri=http://webserver:8080/metrics
+    expose:
+      - 9113
+    networks:
+      - default
+      - metrics
+
+
 volumes:
   static:
 
 networks:
   nginx-proxy:
-    name: nginx-proxy	
+    name: nginx-proxy
     external: true
+  metrics:
