@@ -92,6 +92,7 @@ def form() -> rx.Form:
         on_submit=FormState.send,
     )
 
+
 def contact() -> rx.Component:
     return rx.vstack(
         rx.flex(
@@ -112,8 +113,6 @@ def contact() -> rx.Component:
                 rx.link(
                     Email.ADDRESS.value,
                     href=Links.EMAIL.value,
-                    as_="b",
-                    color=styles.colors.Main.ACCENT.value
                 )
             )
         ),

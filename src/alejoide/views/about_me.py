@@ -18,7 +18,7 @@ def cards(**args) -> rx.Component:
         )
     return rx.responsive_grid(
         *[rx.box(card, **args) for card in cards],
-        columns=[2],
+        columns=[1,1,1,2,2],
         spacing=Size.LARGE.value,
         )
 

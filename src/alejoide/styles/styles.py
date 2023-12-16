@@ -2,6 +2,7 @@ import reflex as rx
 from alejoide.styles.fonts import Font
 from alejoide.styles import colors
 from alejoide.styles.sizes import Size
+from alejoide.modules.utils import hex_to_rgba
 
 # Google Fonts and Font Awesome
 STYLESHEETS = [
@@ -11,14 +12,13 @@ STYLESHEETS = [
 
 
 BASE = {
-    "scroll_behavior": "smooth",
     "font_family": Font.DEFAULT.value,
     "font_size": Size.NORMAL.value,
     "color": colors.Text.PRIMARY.value,
     "background": colors.Main.PRIMARY.value,
     "animation": "fadeIn 1s ease-in-out",
     rx.Flex: {
-        "width": "100%",
+        "width": "80%",
         "max_width": "1200px",
         "justify_content": "space-between",
         "align_items":"center",
@@ -30,7 +30,7 @@ BASE = {
         ":hover": {
             "color": colors.Text.PRIMARY.value,
             "text_decoration": "none",
-        },
+        }
     },
     rx.Heading: {
         "font_family": Font.DEFAULT.value,
@@ -57,18 +57,20 @@ DARK_LINKS = {
 # NAVBAR STYLE
 
 NAVBAR = {
-    "background": colors.Header.SECONDARY.value,
-    "color": colors.Text.SECONDARY.value,
+    "background": colors.Main.TERCEARY.value,
     "justify_content": "center",
     "padding_y": Size.LARGE.value,
     "position": "sticky",
     "top": 0,
     "animation": "minimize linear both",
     "animation_timeline": "scroll(root)",
-    "animation_range": "0 300px",
+    "animation_range": "95vh 125vh",
+    "a": DARK_LINKS,
     "@keyframes minimize": {
         "to": {
             "font_size": Size.SMALL.value,
+            "background": hex_to_rgba(colors.Main.SECONDARY.value, 0.8),
+            "backdrop-filter": "blur(5px)",
         }
     },
     "z_index": 2,
@@ -101,7 +103,7 @@ FORM_COMPONENTS = {
     "padding_y": Size.NORMAL.value,
 }
 
-ABOUT_ME_CARDS = {
+ABOUT_ME_CARDS = {	
     "transition": "transform 0.2s ease-in-out",
     "transition_delay": "0.2s",
     ":hover": {

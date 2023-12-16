@@ -5,13 +5,13 @@ from alejoide.styles import styles, colors
 from alejoide.components.logo import logo
 
 
-def buttons() -> rx.Component:
+def buttons(**args) -> rx.Component:
     return rx.hstack(
-        rx.link("Inicio", href=Links.HOME.value, style=styles.DARK_LINKS),
-        rx.link("Sobre mí", href=Links.ABOUT.value, style=styles.DARK_LINKS),
+        rx.link("Inicio", href=Links.HOME.value),
+        rx.link("Sobre mí", href=Links.ABOUT.value),
         # rx.link("Proyectos", href=Links.PROJECTS.value),
-        rx.link("Contacto", href=Links.CONTACT.value, style=styles.DARK_LINKS),
-        gap=Size.LARGE.value,
+        rx.link("Contacto", href=Links.CONTACT.value),
+        gap=Size.LARGE.value
     )
 
 
