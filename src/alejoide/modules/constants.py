@@ -30,7 +30,6 @@ class AboutMe(Enum):
         "A comienzos de 2022, se me ofreció la oportunidad de trabajar como SRE/DevOps, un mundo nuevo con nuevos desafíos que me tocó enfrentar.",
         "A día de hoy me encuentro enamorado de esta nueva área, y apunto a seguir aprendiendo y creciendo profesionalmente en ella.",
     ]
-
     CARDS = [
         {
             "icon": "fa-solid fa-infinity",
@@ -63,3 +62,6 @@ class AboutMe(Enum):
             ]
         }
     ]
+
+class Scripts(Enum):
+    FONT_AWESOME = "https://kit.fontawesome.com/ed6fce8479.js"

@@ -6,13 +6,13 @@ from alejoide.views.footer import footer
 from alejoide.views.contact import contact
 from alejoide.styles import styles
 from alejoide.styles.sizes import Size
-from alejoide.modules.constants import App
+from alejoide.modules.constants import App, Scripts
 
 
 @rx.page(route="/", title=App.NAME.value, description=App.DESCRIPTION.value)
 def index() -> rx.Component:
     return rx.box(
-        rx.script(src="https://kit.fontawesome.com/ed6fce8479.js"),
+        rx.script(src=Scripts.FONT_AWESOME.value),
         navbar(),
         header(),
         rx.spacer(height=Size.XXXLARGE.value),
