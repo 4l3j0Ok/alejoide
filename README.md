@@ -1,6 +1,6 @@
 <div align=center>
 
-<img src="./resources/logo.svg" alt="Logo">
+[![Logo](./resources/logo.svg)](https://alejoide.com)
 
 ---
 
