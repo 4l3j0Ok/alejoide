@@ -26,14 +26,3 @@ def text_area(key: str = "", label: str = "", placeholder: str = "", **args) -> 
             **args
         )
     )
-
-
-def button(label: str = "", **args) -> rx.Button:
-    return rx.button(
-        label,
-        class_name="button is-primary",
-        variant="solid",
-        style=styles.FORM_COMPONENTS,
-        color_scheme="pink",
-        **args
-    )

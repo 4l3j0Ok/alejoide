@@ -34,7 +34,7 @@ class AboutMe(Enum):
         {
             "icon": "fa-solid fa-infinity",
             "title": "SRE / DevOps",
-            "body": [
+            "description": [
                 "Actualmente me encuentro trabajando de SRE/DevOps, donde trabajo principalmente con tecnologías como Docker, Apache, Jenkins, GitLab, LXC, NGINX, que me permiten crear infraestructura y pipelines para aplicar prácticas de CI/CD.",
                 "Además de eso, actualmente estoy aprendiendo otras tecnologías como Kubernetes y plataformas Cloud."
             ]
@@ -42,14 +42,14 @@ class AboutMe(Enum):
         {
             "icon": "fa-brands fa-python",
             "title": "Backend",
-            "body": [
+            "description": [
                 "Tengo experiencia trabajando como desarrollador backend, siendo mi fuerte principal el desarrollo en Python, lenguaje que me apasiona y con el que he trabajado tanto en proyectos personales como profesionales con frameworks como Flask, FastAPI, PyQT, Reflex, entre otros."
             ]
         },
         {
             "icon": "fa-brands fa-react",
             "title": "Frontend",
-            "body": [
+            "description": [
                 "Me encuentro incursionando en el mundo del desarrollo de frontend, donde estoy aprendiendo Reflex, React y otras tecnologías con el objetivo de poder crear aplicaciones web y móviles.",
                 "De hecho, ¡este sitio web está desarrollado por mí utilizando Reflex!"
             ]
@@ -57,11 +57,38 @@ class AboutMe(Enum):
         {
             "icon": "fa-solid fa-user-tie",
             "title": "Profesor",
-            "body": [
+            "description": [
                 "Me gusta mucho enseñar, por lo que también estoy apuntando a ser profesor de programación en escuelas de nivel superior."
             ]
         }
     ]
+
+
+class Projects(Enum):
+    CARDS = [
+        {
+            "icon": "fa-brands fa-python | fa-brands fa-react",
+            "title": "Alejoide",
+            "description": [
+                "Este sitio web. Desarrollado con Reflex.",
+                "¡También es un proyecto de código abierto! Podés ver el código en mi GitHub."
+            ],
+            "image": "projects/alejoide.png",
+            "repo_url": "https://github.com/4l3j0Ok/alejoide-web",
+            "app_url": Links.APP_URL.value,
+            "is_here": True
+        }
+    ]
+
+    GITHUB_BUTTON = {
+        "icon": "fa-brands fa-github",
+        "text": "Ver en GitHub"
+        }
+
+    APP_BUTTON = {
+        "icon": "fa-solid fs-external-link",
+        "text": "Ir a la aplicación"
+    }
 
 class Scripts(Enum):
     FONT_AWESOME = "https://kit.fontawesome.com/ed6fce8479.js"

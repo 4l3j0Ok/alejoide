@@ -94,7 +94,7 @@ FOOTER = {
     "width": "100%",
     "padding_y": Size.XXLARGE.value,
     "padding_x": Size.LARGE.value,
-    "justify_content":"center",
+    "justify_content": "center",
 }
 
 
