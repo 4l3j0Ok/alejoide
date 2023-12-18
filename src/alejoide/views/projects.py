@@ -9,23 +9,26 @@ def add_button(
         buttons: list,
         text: str,
         url: str,
-        icon: str
+        icon: str,
+        is_disabled: bool = False
     ):
     buttons.append(
-                rx.link(
-                    button(
-                        rx.text(
-                            rx.span(
-                                class_name=icon,
-                                margin_right=Size.SMALL.value
-                            ),
-                            rx.span(text),
-                        ),
-                        width="100%"
+        rx.link(
+            button(
+                rx.text(
+                    rx.span(
+                        class_name=icon,
+                        margin_right=Size.SMALL.value
                     ),
-                    href=url,
-                )
-            )
+                    rx.span(text),
+                ),
+                width="100%",
+                is_disabled=is_disabled
+            ),
+            href=url,
+            is_external=True
+        )
+    )
 
 
 def cards(**args) -> rx.Component:
@@ -44,7 +47,8 @@ def cards(**args) -> rx.Component:
                 buttons,
                 text=Projects.APP_BUTTON.value["text"],
                 url=item.get("app_url"),
-                icon=Projects.APP_BUTTON.value["icon"]
+                icon=Projects.APP_BUTTON.value["icon"],
+                is_disabled=item.get("is_disabled", False)
             )
         cards.append(
             card_with_image(
@@ -68,10 +72,12 @@ def projects() -> rx.Component:
         rx.flex(
             rx.box(
                 rx.heading("Proyectos"),
-                rx.text(
-                    "Aquí hay algunos de mis proyectos personales."
-                )
+                rx.box(
+                    *[rx.text(line) for line in Projects.DESCRIPTION.value],
+                    margin_bottom=Size.LARGE.value,
+                ),
             ),
             cards()
-        )
+        ),
+        id="projects"
     )

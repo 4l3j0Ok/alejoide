@@ -66,6 +66,11 @@ class AboutMe(Enum):
 
 
 class Projects(Enum):
+    DESCRIPTION = [
+        "Estos son algunos de los proyectos personales en los que he trabajado, tanto en mi tiempo libre.",
+        "Tengo muchos más proyectos además de estos, pero los que se muestran aquí son los que considero más importantes.",
+        "¡También podés ver todos mis proyectos en mi GitHub!"
+    ]
     CARDS = [
         {
             "icon": "fa-brands fa-python | fa-brands fa-react",
@@ -75,9 +80,41 @@ class Projects(Enum):
                 "¡También es un proyecto de código abierto! Podés ver el código en mi GitHub."
             ],
             "image": "projects/alejoide.png",
-            "repo_url": "https://github.com/4l3j0Ok/alejoide-web",
+            "repo_url": Links.APP_REPO_URL.value,
             "app_url": Links.APP_URL.value,
-            "is_here": True
+            "is_disabled": True
+        },
+        {
+            "icon": "fa-brands fa-python | fa-solid fa-globe",
+            "title": "BCRA Scraper API",
+            "description": [
+                "Una API de código abierto que permite obtener los bancos registrados en el BCRA.",
+            ],
+            "image": "projects/bcra_scraper_api.png",
+            "repo_url": "https://github.com/4l3j0Ok/bcra-scraper-api",
+            "app_url": "https://bcra-scraper-api.alejoide.com",
+            "is_disabled": False
+        },
+        {
+            "icon": "fa-brands fa-python | fa-brands fa-windows",
+            "title": "Fall Guys Anti Sniper",
+            "description": [
+                "Este sitio web. Desarrollado con Reflex.",
+                "¡También es un proyecto de código abierto! Podés ver el código en mi GitHub."
+            ],
+            "image": "projects/fg_anti_sniper.png",
+            "repo_url": "https://github.com/4l3j0Ok/fall-guys-anti-sniper",
+            "is_disabled": False
+        },
+        {
+            "icon": "fa-brands fa-python | fa-brands fa-docker",
+            "title": "Prodesk Stacks",
+            "description": [
+                "Echale un vistazo a los stacks que tengo levantados en mi propio servidor de casa.",
+            ],
+            "image": "projects/prodesk_stacks.png",
+            "repo_url": "https://github.com/4l3j0Ok/prodesk-stacks",
+            "is_disabled": False
         }
     ]
 
@@ -87,8 +124,8 @@ class Projects(Enum):
         }
 
     APP_BUTTON = {
-        "icon": "fa-solid fs-external-link",
-        "text": "Ir a la aplicación"
+        "icon": "fa-solid fa-link",
+        "text": "Ver app"
     }
 
 class Scripts(Enum):
