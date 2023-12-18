@@ -4,7 +4,12 @@ from alejoide.styles.sizes import Size
 from alejoide.modules.utils import hex_to_rgba
 
 
-def card(description = "", title = "", icon = "", **args) -> rx.Card:
+def card(description = "", title = "", icon = "", buttons = [], **args) -> rx.Card:
+    footer = rx.responsive_grid(
+        *[button for button in buttons],
+        columns=[1, 1, 1, 2, 2],
+        spacing=Size.NORMAL.value,
+        width="100%") if buttons else None
     return rx.card(
         body=description,
         header=rx.text(
@@ -21,10 +26,8 @@ def card(description = "", title = "", icon = "", **args) -> rx.Card:
             ],
             font_size=Size.LARGE.value
         ),
-        box_shadow=f"5px 5px 5px {hex_to_rgba(colors.Main.SECONDARY.value, 0.2)}",
-        border=f"2px solid {hex_to_rgba(colors.Main.SECONDARY.value, 0.1)}",
         min_height="20em",
-        height="auto",
+        footer=footer,
         **args
     )
 
@@ -65,10 +68,7 @@ def card_with_image(description = "", title = "", icon = "", image = "", buttons
         width="100%") if buttons else None
     return rx.card(
         body=body,
-        box_shadow=f"5px 5px 5px {hex_to_rgba(colors.Main.SECONDARY.value, 0.2)}",
-        border=f"2px solid {hex_to_rgba(colors.Main.SECONDARY.value, 0.1)}",
         min_height="35em",
-        height="auto",
         footer=footer,
         **args
     )

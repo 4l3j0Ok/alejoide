@@ -17,6 +17,11 @@ BASE = {
     "color": colors.Text.PRIMARY.value,
     "background": colors.Main.PRIMARY.value,
     "animation": "fadeIn 1s ease-in-out",
+    rx.Card: {
+        "box_shadow": f"5px 5px 5px {hex_to_rgba(colors.Main.SECONDARY.value, 0.2)}",
+        "border": f"2px solid {hex_to_rgba(colors.Main.SECONDARY.value, 0.1)}",
+        "height": "auto"
+    },
     rx.Flex: {
         "width": "80%",
         "max_width": "1200px",
