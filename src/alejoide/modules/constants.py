@@ -99,8 +99,7 @@ class Projects(Enum):
             "icon": "fa-brands fa-python | fa-brands fa-windows",
             "title": "Fall Guys Anti Sniper",
             "description": [
-                "Este sitio web. Desarrollado con Reflex.",
-                "¡También es un proyecto de código abierto! Podés ver el código en mi GitHub."
+                "Aplicación para streamers de Fall Guys que permite evitar el stream-sniping."
             ],
             "image": "projects/fg_anti_sniper.png",
             "repo_url": "https://github.com/4l3j0Ok/fall-guys-anti-sniper",
