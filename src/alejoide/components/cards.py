@@ -34,7 +34,8 @@ def card_with_image(description = "", title = "", icon = "", image = "", buttons
     pre_body.append(
         rx.image(
             src=image,
-            border_radius="5px"
+            border_radius="5px",
+            width="100%",
             )
         ) if image else None
     icons = [
@@ -59,14 +60,14 @@ def card_with_image(description = "", title = "", icon = "", image = "", buttons
     body = rx.box(*[item for item in pre_body if item])
     footer = rx.responsive_grid(
         *[button for button in buttons],
-        columns=[1, 1, 2, 2, 2],
+        columns=[1, 1, 1, 2, 2],
         spacing=Size.NORMAL.value,
         width="100%") if buttons else None
     return rx.card(
         body=body,
         box_shadow=f"5px 5px 5px {hex_to_rgba(colors.Main.SECONDARY.value, 0.2)}",
         border=f"2px solid {hex_to_rgba(colors.Main.SECONDARY.value, 0.1)}",
-        min_height="20em",
+        min_height="35em",
         height="auto",
         footer=footer,
         **args

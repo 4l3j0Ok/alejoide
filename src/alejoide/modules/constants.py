@@ -3,12 +3,12 @@ import os
 
 
 class App(Enum):
-    NAME = os.getenv("APP_NAME", "Alejoide")
-    DESCRIPTION = os.getenv("APP_DESCRIPTION", "Alejoide, mi sitio web personal.")
+    NAME = "Alejoide"
+    DESCRIPTION = "Alejoide, mi sitio web personal."
 
 
 class Email(Enum):
-    ADDRESS = os.getenv("EMAIL_ADDRESS", "some@address.com")
+    ADDRESS = os.getenv("EMAIL_ADDRESS", "alejofsarmiento@gmail.com")
     TOKEN = os.getenv("EMAIL_TOKEN", "token")
     SUBJECT = f"{App.NAME.value.upper()} | Contacto"
     MESSAGE_HEADER = "<h1>NUEVO CONTACTO</h1>"
@@ -19,7 +19,8 @@ class Links(Enum):
     ABOUT = "#about_me"
     PROJECTS = "#projects"
     CONTACT = "#contact"
-    APP_URL = os.getenv("APP_URL", "localhost:3000")
+    APP_URL = os.getenv("APP_URL", "https://alejoide.com")
+    APP_REPO_URL = os.getenv("APP_REPO_URL", "https://github.com/4l3j0Ok/alejoide-web")
     EMAIL = f"mailto:{Email.ADDRESS.value}"
 
 class AboutMe(Enum):
