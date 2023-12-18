@@ -11,14 +11,14 @@ def cards(**args) -> rx.Component:
     for item in AboutMe.CARDS.value:
         cards.append(
             card(
-                body=rx.box(*[rx.text(line) for line in item["body"]]),
+                description=rx.box(*[rx.text(line) for line in item["description"]]),
                 title=item["title"],
                 icon=item["icon"],
             )
         )
     return rx.responsive_grid(
         *[rx.box(card, **args) for card in cards],
-        columns=[1,1,1,2,2],
+        columns=[1, 1, 1, 2, 2],
         spacing=Size.LARGE.value,
         )
 

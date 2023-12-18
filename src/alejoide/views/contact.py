@@ -3,6 +3,7 @@ from alejoide.modules.constants import Links, Email
 from alejoide.modules.utils import send_mail
 from alejoide.styles import styles
 from alejoide.components import forms
+from alejoide.components.buttons import button
 from alejoide.styles.sizes import Size
 
 
@@ -82,12 +83,13 @@ def form() -> rx.Form:
             ),
             is_required=True
         ),
-        forms.button(
+        button(
             FormState.submit_label,
             type_="submit",
             is_loading=FormState.loading,
             is_disabled=FormState.sent,
             margin_top=Size.NORMAL.value,
+            width="100%"
         ),
         on_submit=FormState.send,
     )

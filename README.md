@@ -2,7 +2,7 @@
 
 [![Logo](./resources/logo.svg)](https://alejoide.com)
 
-
+---
 
 [![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)![Static Badge](https://img.shields.io/badge/3.12-blue?style=for-the-badge)](https://www.python.org/downloads/release/python-3114/) [![Reflex](https://img.shields.io/badge/reflex-purple?style=for-the-badge&logo=python&logoColor=white&labelColor=purple)![Static Badge](https://img.shields.io/badge/0.3.4+-white?style=for-the-badge)](https://reflex.dev)
 
