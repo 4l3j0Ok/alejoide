@@ -10,7 +10,7 @@
 [![Github Actions](https://img.shields.io/badge/Actions-white?style=for-the-badge&logo=github&logoColor=black)](https://github.com/features/actions)
 
 
-[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/alejoide/alejoide-web)](https://hub.docker.com/r/alejoide/alejoide-web) [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/alejoide/alejoide-web)](https://hub.docker.com/r/alejoide/bcra-scraper-api)
+[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/alejoide/alejoide-web)](https://hub.docker.com/r/alejoide/alejoide-web) [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/alejoide/alejoide-web)](https://hub.docker.com/r/alejoide/alejoide-web)
 
 </div>
 
