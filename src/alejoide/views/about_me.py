@@ -11,9 +11,9 @@ def cards(**args) -> rx.Component:
     for item in AboutMe.CARDS.value:
         cards.append(
             card(
-                description=rx.box(*[rx.text(line) for line in item["description"]]),
-                title=item["title"],
-                icon=item["icon"],
+                description=rx.box(*[rx.text(line) for line in item.get("description", "")]),
+                title=item.get("title"),
+                icons=item.get("icons"),
             )
         )
     return rx.responsive_grid(

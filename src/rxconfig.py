@@ -4,5 +4,5 @@ import os
 
 config = rx.Config(
     app_name="alejoide",
-    api_url=os.getenv("API_URL", "http://localhost:8000"),
+    api_url=os.getenv("API_URL", "http://localhost:8000")
 )
