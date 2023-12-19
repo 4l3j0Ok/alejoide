@@ -33,7 +33,7 @@ class AboutMe(Enum):
     ]
     CARDS = [
         {
-            "icon": "fa-solid fa-infinity",
+            "icons": "fa6-solid:infinity",
             "title": "SRE / DevOps",
             "description": [
                 "Actualmente me encuentro trabajando de SRE/DevOps, donde trabajo principalmente con tecnologías como Docker, Apache, Jenkins, GitLab, LXC, NGINX, que me permiten crear infraestructura y pipelines para aplicar prácticas de CI/CD.",
@@ -41,14 +41,14 @@ class AboutMe(Enum):
             ]
         },
         {
-            "icon": "fa-brands fa-python",
+            "icons": "fa-brands:python",
             "title": "Backend",
             "description": [
                 "Tengo experiencia trabajando como desarrollador backend, siendo mi fuerte principal el desarrollo en Python, lenguaje que me apasiona y con el que he trabajado tanto en proyectos personales como profesionales con frameworks como Flask, FastAPI, PyQT, Reflex, entre otros."
             ]
         },
         {
-            "icon": "fa-brands fa-react",
+            "icons": "nonicons:react-16",
             "title": "Frontend",
             "description": [
                 "Me encuentro incursionando en el mundo del desarrollo de frontend, donde estoy aprendiendo Reflex, React y otras tecnologías con el objetivo de poder crear aplicaciones web y móviles.",
@@ -56,7 +56,7 @@ class AboutMe(Enum):
             ]
         },
         {
-            "icon": "fa-solid fa-user-tie",
+            "icons": "ic:baseline-school",
             "title": "Profesor",
             "description": [
                 "Me gusta mucho enseñar, por lo que también estoy apuntando a ser profesor de programación en escuelas de nivel superior."
@@ -73,7 +73,7 @@ class Projects(Enum):
     ]
     CARDS = [
         {
-            "icon": "fa-brands fa-python | fa-brands fa-react",
+            "icons": "fa-brands:python|nonicons:react-16",
             "title": "Alejoide",
             "description": [
                 "Este sitio web. Desarrollado con Reflex.",
@@ -85,7 +85,7 @@ class Projects(Enum):
             "is_disabled": True
         },
         {
-            "icon": "fa-brands fa-python | fa-solid fa-globe",
+            "icons": "fa-brands:python|eos-icons:api",
             "title": "BCRA Scraper API",
             "description": [
                 "Una API de código abierto que permite obtener los bancos registrados en el BCRA.",
@@ -96,7 +96,7 @@ class Projects(Enum):
             "is_disabled": False
         },
         {
-            "icon": "fa-brands fa-python | fa-brands fa-windows",
+            "icons": "fa-brands:python|heroicons:window-20-solid",
             "title": "Fall Guys Anti Sniper",
             "description": [
                 "Aplicación para streamers de Fall Guys que permite evitar el stream-sniping."
@@ -106,7 +106,7 @@ class Projects(Enum):
             "is_disabled": False
         },
         {
-            "icon": "fa-brands fa-python | fa-brands fa-docker",
+            "icons": "fa-brands:docker",
             "title": "Prodesk Stacks",
             "description": [
                 "Echale un vistazo a los stacks que tengo levantados en mi propio servidor de casa.",
@@ -118,14 +118,14 @@ class Projects(Enum):
     ]
 
     GITHUB_BUTTON = {
-        "icon": "fa-brands fa-github",
+        "icon": "fa-brands:github",
         "text": "Ver en GitHub"
         }
 
     APP_BUTTON = {
-        "icon": "fa-solid fa-link",
+        "icon": "fa-solid:link",
         "text": "Ver app"
     }
 
 class Scripts(Enum):
-    FONT_AWESOME = "https://kit.fontawesome.com/ed6fce8479.js"
+    FONT_AWESOME = "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"

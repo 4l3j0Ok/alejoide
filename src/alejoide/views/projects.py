@@ -3,6 +3,7 @@ from alejoide.styles.sizes import Size
 from alejoide.modules.constants import Projects
 from alejoide.components.cards import card_with_image
 from alejoide.components.buttons import button
+from alejoide.components.react.icons import iconify
 
 
 def add_button(
@@ -16,8 +17,8 @@ def add_button(
         rx.link(
             button(
                 rx.text(
-                    rx.span(
-                        class_name=icon,
+                    iconify(
+                        icon,
                         margin_right=Size.SMALL.value
                     ),
                     rx.span(text),
@@ -54,7 +55,7 @@ def cards(**args) -> rx.Component:
             card_with_image(
                 description=item.get("description"),
                 title=item.get("title"),
-                icon=item.get("icon"),
+                icons=item.get("icons"),
                 image=item.get("image"),
                 buttons=buttons
             )

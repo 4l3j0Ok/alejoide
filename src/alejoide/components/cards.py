@@ -1,10 +1,10 @@
 import reflex as rx
 from alejoide.styles import colors
 from alejoide.styles.sizes import Size
-from alejoide.modules.utils import hex_to_rgba
+from alejoide.components.react.icons import iconify
 
 
-def card(description = "", title = "", icon = "", buttons = [], **args) -> rx.Card:
+def card(description = "", title = "", icons = "", buttons = [], **args) -> rx.Card:
     footer = rx.responsive_grid(
         *[button for button in buttons],
         columns=[1, 1, 1, 2, 2],
@@ -18,11 +18,11 @@ def card(description = "", title = "", icon = "", buttons = [], **args) -> rx.Ca
                 font_weight="bold"
             ),
             *[
-                rx.span(
-                    class_name=i,
+                iconify(
+                    icon,
                     margin_left=Size.SMALL.value,
-                    color=colors.Main.ACCENT.value,
-                ) for i in icon.split("|")
+                    color=colors.Main.ACCENT.value
+                ) for icon in icons.split("|")
             ],
             font_size=Size.LARGE.value
         ),
@@ -32,7 +32,7 @@ def card(description = "", title = "", icon = "", buttons = [], **args) -> rx.Ca
     )
 
 
-def card_with_image(description = "", title = "", icon = "", image = "", buttons = [], **args) -> rx.Card:
+def card_with_image(description = "", title = "", icons = "", image = "", buttons = [], **args) -> rx.Card:
     pre_body = []
     pre_body.append(
         rx.image(
@@ -41,22 +41,21 @@ def card_with_image(description = "", title = "", icon = "", image = "", buttons
             width="100%",
             )
         ) if image else None
-    icons = [
-        rx.span(
-            class_name=i,
-            margin_left=Size.SMALL.value,
-            color=colors.Main.ACCENT.value,
-        ) for i in icon.split("|") if icon 
-    ]
     pre_body.append(
         rx.heading(
             rx.span(
                 title,
                 font_weight="bold"
             ),
-            *icons,
+            *[
+                iconify(
+                    icon,
+                    margin_left=Size.SMALL.value,
+                    color=colors.Main.ACCENT.value,
+                ) for icon in icons.split("|")
+            ],
             justify_content="space-between",
-            font_size=Size.LARGE.value
+            font_size=Size.LARGE.value,
         )
     )
     pre_body.append(rx.box(*[rx.text(line) for line in description]))
