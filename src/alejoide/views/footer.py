@@ -1,10 +1,10 @@
 import reflex as rx
+from datetime import date
 from alejoide.styles import styles
 from alejoide.styles.sizes import Size
 from alejoide.modules.constants import Links, App, Footer
 from alejoide.components.logo import logo
 from alejoide.components.react.icons import iconify
-from datetime import date
 
 
 def icons():

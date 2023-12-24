@@ -1,10 +1,10 @@
 import reflex as rx
+from alejoide.styles import styles
+from alejoide.styles.sizes import Size
 from alejoide.modules.constants import Links, Email
 from alejoide.modules.utils import send_mail
-from alejoide.styles import styles
 from alejoide.components import forms
 from alejoide.components.buttons import button
-from alejoide.styles.sizes import Size
 
 
 class FormState(rx.State):

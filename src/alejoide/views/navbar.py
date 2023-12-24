@@ -1,7 +1,7 @@
 import reflex as rx
 from alejoide.modules.constants import Links
-from alejoide.styles.sizes import Size
 from alejoide.styles import styles
+from alejoide.styles.sizes import Size
 from alejoide.components.logo import logo
 
 
