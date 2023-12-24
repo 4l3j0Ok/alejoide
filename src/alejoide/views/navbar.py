@@ -11,7 +11,8 @@ def buttons(**args) -> rx.Component:
         rx.link("Sobre mí", href=Links.ABOUT.value),
         rx.link("Proyectos", href=Links.PROJECTS.value),
         rx.link("Contacto", href=Links.CONTACT.value),
-        gap=Size.LARGE.value
+        gap=Size.LARGE.value,
+        margin_top=[Size.NORMAL.value, Size.NORMAL.value, Size.NORMAL.value, 0],
     )
 
 

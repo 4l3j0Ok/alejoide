@@ -1,9 +1,12 @@
-from enum import Enum
 import os
+from enum import Enum
+
 
 
 class App(Enum):
     NAME = "Alejoide"
+    VERSION = "v1"
+    AUTHOR = "Alejo Sarmiento"
     DESCRIPTION = "Alejoide, mi sitio web personal."
 
 
@@ -22,6 +25,7 @@ class Links(Enum):
     APP_URL = os.getenv("APP_URL", "https://alejoide.com")
     APP_REPO_URL = os.getenv("APP_REPO_URL", "https://github.com/4l3j0Ok/alejoide-web")
     EMAIL = f"mailto:{Email.ADDRESS.value}"
+
 
 class AboutMe(Enum):
     DESCRIPTION = [
@@ -126,6 +130,37 @@ class Projects(Enum):
         "icon": "fa-solid:link",
         "text": "Ver app"
     }
+
+
+class Footer(Enum):
+    ICONS = [
+        {
+            "icon": "fa-brands:instagram",
+            "link": "https://instagram.com/4l3j0"
+        },
+        {
+            "icon": "fa-brands:twitter",
+            "link": "https://twitter.com/alejoide_"
+        },
+        {
+            "icon": "fa-brands:github",
+            "link": "https://github.com/4l3j0Ok"
+        },
+        {
+            "icon": "fa-brands:linkedin",
+            "link": "https://www.linkedin.com/in/alejoide"
+        },
+        {
+            "icon": "tabler:mail-filled",
+            "link": Links.EMAIL.value,
+            "new_tab": False
+        },
+        # {
+        #     "icon": "fa-solid:ellipsis-h",
+        #     "link": "https://links.alejoide.com"
+        # }
+    ]
+
 
 class Scripts(Enum):
     FONT_AWESOME = "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
