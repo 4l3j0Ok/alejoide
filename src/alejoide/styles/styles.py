@@ -63,6 +63,7 @@ DARK_LINKS = {
 
 NAVBAR = {
     "background": colors.Main.TERCEARY.value,
+    "text_align": "center",
     "justify_content": "center",
     "padding_y": Size.LARGE.value,
     "position": "sticky",

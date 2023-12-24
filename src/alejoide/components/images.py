@@ -7,7 +7,8 @@ def profile(
         asset: str,
         alt_text: str = "",
         border_size: Size = Size.XXSMALL.value,
-        border_color: colors.Main = colors.Main.PRIMARY.value
+        border_color: colors.Main = colors.Main.PRIMARY.value,
+        **args
     ) -> rx.Component:
     return rx.image(
         src=asset,
@@ -16,6 +17,7 @@ def profile(
         height="auto",
         border_radius="50%",
         overflow="hidden",
-        border=f"{border_size} solid {border_color} ",
+        border=f"{border_size} solid {border_color}",
         object_fit="cover",
+        **args
     )
