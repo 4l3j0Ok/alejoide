@@ -4,12 +4,11 @@ from alejoide.styles import colors
 from alejoide.styles.sizes import Size
 from alejoide.modules.utils import hex_to_rgba
 
-# Google Fonts and Font Awesome
+
 STYLESHEETS = [
     f"https://fonts.googleapis.com/css?family={Font.DEFAULT.value}&display=swap",
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css",
 ]
-
 
 BASE = {
     "font_family": Font.DEFAULT.value,
@@ -49,7 +48,6 @@ BASE = {
     }
 }
 
-# FOR LINKS WHERE THE BACKGROUND IS DARK
 DARK_LINKS = {
     "color": colors.Text.SECONDARY.value,
     ":hover": {
@@ -57,8 +55,6 @@ DARK_LINKS = {
         "text_decoration": "none",
     },
 }
-
-# NAVBAR STYLE
 
 NAVBAR = {
     "background": colors.Main.TERCEARY.value,
@@ -81,17 +77,12 @@ NAVBAR = {
     "z_index": 2,
 }
 
-# HEADER STYLE
-
 HEADER = {
     "height": "95vh",
     "justify_content": "center",
     "background": colors.Header.PRIMARY.value,
     "color": colors.Text.SECONDARY.value,
 }
-
-
-# FOOTER STYLE
 
 FOOTER = {
     "color": colors.Text.SECONDARY.value,
@@ -101,7 +92,6 @@ FOOTER = {
     "padding_x": Size.LARGE.value,
     "justify_content": "center",
 }
-
 
 FORM_COMPONENTS = {
     "width": "100%",
