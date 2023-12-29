@@ -27,6 +27,17 @@ class Links(Enum):
     EMAIL = f"mailto:{Email.ADDRESS.value}"
 
 
+class GoogleAnalytics(Enum):
+    TAG = os.getenv("GOOGLE_ANALYTICS_TAG", "G-XXXXXXX")
+    SCRIPT = f"https://www.googletagmanager.com/gtag/js?id={TAG}"
+    SEND_DATA_SCRIPT = f"""
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){{dataLayer.push(arguments);}}
+        gtag('js', new Date());
+        gtag('config', '{TAG}');
+    """
+
+
 class AboutMe(Enum):
     DESCRIPTION = [
         "Mi nombre es Alejo. Tengo 22 años y vivo en Argentina.",
@@ -160,7 +171,3 @@ class Footer(Enum):
         #     "link": "https://links.alejoide.com"
         # }
     ]
-
-
-class Scripts(Enum):
-    FONT_AWESOME = "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"

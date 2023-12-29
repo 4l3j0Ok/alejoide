@@ -7,13 +7,14 @@ from alejoide.views.contact import contact
 from alejoide.views.projects import projects
 from alejoide.styles import styles
 from alejoide.styles.sizes import Size
-from alejoide.modules.constants import App, Scripts
+from alejoide.modules.constants import App, GoogleAnalytics
 
 
 @rx.page(route="/", title=App.NAME.value, description=App.DESCRIPTION.value)
 def index() -> rx.Component:
     return rx.box(
-        rx.script(src=Scripts.FONT_AWESOME.value),
+        rx.script(src=GoogleAnalytics.SCRIPT.value),
+        rx.script(GoogleAnalytics.SEND_DATA_SCRIPT.value),
         navbar(),
         header(),
         rx.spacer(height=Size.XXXLARGE.value),
