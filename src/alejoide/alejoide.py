@@ -13,8 +13,6 @@ from alejoide.modules.constants import App, GoogleAnalytics
 @rx.page(route="/", title=App.NAME.value, description=App.DESCRIPTION.value)
 def index() -> rx.Component:
     return rx.box(
-        rx.script(src=GoogleAnalytics.SCRIPT.value),
-        rx.script(GoogleAnalytics.SEND_DATA_SCRIPT.value),
         navbar(),
         header(),
         rx.spacer(height=Size.XXXLARGE.value),
@@ -29,7 +27,11 @@ def index() -> rx.Component:
 
 app = rx.App(
     stylesheets=styles.STYLESHEETS,
-    style=styles.BASE
+    style=styles.BASE,
+    head_components=[
+        rx.script(src=GoogleAnalytics.SCRIPT.value),
+        rx.script(GoogleAnalytics.SEND_DATA_SCRIPT.value),
+    ]
 )
 
 app.compile()
