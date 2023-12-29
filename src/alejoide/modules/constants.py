@@ -29,12 +29,21 @@ class Links(Enum):
 
 class GoogleAnalytics(Enum):
     TAG = os.getenv("GOOGLE_ANALYTICS_TAG", "G-XXXXXXX")
-    SCRIPT = f"https://www.googletagmanager.com/gtag/js?id={TAG}"
-    SEND_DATA_SCRIPT = f"""
-window.dataLayer = window.dataLayer || [];
-function gtag(){{dataLayer.push(arguments);}}
-gtag('js', new Date());
-gtag('config', '{TAG}');
+    SCRIPT = f"""<script>
+var scriptTag = document.createElement('script');
+scriptTag.async = true;
+scriptTag.src = 'https://www.googletagmanager.com/gtag/js?id={TAG}...';
+document.head.appendChild(scriptTag);
+scriptTag.onload = function() {{
+    var inlineScript = document.createElement('script');
+    inlineScript.text = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {{ dataLayer.push(arguments); }}
+    gtag('js', new Date());
+    gtag('config', '{TAG}...');
+    `;
+    document.head.appendChild(inlineScript);
+}};</script>
 """
 
 
