@@ -31,11 +31,11 @@ class GoogleAnalytics(Enum):
     TAG = os.getenv("GOOGLE_ANALYTICS_TAG", "G-XXXXXXX")
     SCRIPT = f"https://www.googletagmanager.com/gtag/js?id={TAG}"
     SEND_DATA_SCRIPT = f"""
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){{dataLayer.push(arguments);}}
-        gtag('js', new Date());
-        gtag('config', '{TAG}');
-    """
+window.dataLayer = window.dataLayer || [];
+function gtag(){{dataLayer.push(arguments);}}
+gtag('js', new Date());
+gtag('config', '{TAG}');
+"""
 
 
 class AboutMe(Enum):
