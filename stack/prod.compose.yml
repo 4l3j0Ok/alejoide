@@ -28,7 +28,6 @@ services:
       - default
       - nginx-proxy
 
-
 volumes:
   static:
 
