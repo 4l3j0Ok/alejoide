@@ -32,7 +32,7 @@ class GoogleAnalytics(Enum):
     SCRIPT = f"""<script>
 var scriptTag = document.createElement('script');
 scriptTag.async = true;
-scriptTag.src = 'https://www.googletagmanager.com/gtag/js?id={TAG}...';
+scriptTag.src = 'https://www.googletagmanager.com/gtag/js?id={TAG}';
 document.head.appendChild(scriptTag);
 scriptTag.onload = function() {{
     var inlineScript = document.createElement('script');
