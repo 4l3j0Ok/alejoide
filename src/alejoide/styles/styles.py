@@ -6,8 +6,7 @@ from alejoide.modules.utils import hex_to_rgba
 
 
 STYLESHEETS = [
-    f"https://fonts.googleapis.com/css?family={Font.DEFAULT.value}&display=swap",
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css",
+    f"https://fonts.googleapis.com/css?family={Font.DEFAULT.value}&display=swap"
 ]
 
 BASE = {
