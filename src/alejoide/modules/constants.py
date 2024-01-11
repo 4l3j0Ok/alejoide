@@ -89,15 +89,14 @@ class Projects(Enum):
     CARDS = [
         {
             "icons": "fa-brands:python|nonicons:react-16",
-            "title": "Alejoide",
+            "title": "My Links",
             "description": [
                 "Este sitio web. Desarrollado con Reflex.",
                 "¡También es un proyecto de código abierto! Podés ver el código en mi GitHub."
             ],
-            "image": "projects/alejoide.png",
-            "repo_url": Links.APP_REPO_URL.value,
-            "app_url": Links.APP_URL.value,
-            "is_disabled": True
+            "image": "projects/my-links.png",
+            "repo_url": "https://github.com/4l3j0Ok/my-links-web",
+            "app_url": "https://links.alejoide.com",
         },
         {
             "icons": "fa-brands:python|eos-icons:api",
