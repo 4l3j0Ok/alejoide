@@ -14,6 +14,14 @@ BASE = {
     "font_size": Size.NORMAL.value,
     "color": colors.Text.PRIMARY.value,
     "background": colors.Main.PRIMARY.value,
+    "::selection": {
+        "background": colors.Main.ACCENT.value,
+        "color": colors.Text.SECONDARY.value,
+    },
+    "::moz-selection": {
+        "background": colors.Main.ACCENT.value,
+        "color": colors.Text.SECONDARY.value,
+    },
     rx.Card: {
         "box_shadow": f"5px 5px 5px {hex_to_rgba(colors.Main.SECONDARY.value, 0.2)}",
         "border": f"2px solid {hex_to_rgba(colors.Main.SECONDARY.value, 0.1)}",
@@ -44,7 +52,11 @@ BASE = {
         ":hover": {
             "background_color": colors.Main.TERCEARY.value,
         }
-    }
+    },
+    rx.Image: {
+        "pointer-events": "none",
+        "user-select": "none",
+    },
 }
 
 DARK_LINKS = {
