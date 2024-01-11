@@ -91,8 +91,7 @@ class Projects(Enum):
             "icons": "fa-brands:python|nonicons:react-16",
             "title": "My Links",
             "description": [
-                "Este sitio web. Desarrollado con Reflex.",
-                "¡También es un proyecto de código abierto! Podés ver el código en mi GitHub."
+                "Mi web de links profesionales y personales.",
             ],
             "image": "projects/my-links.png",
             "repo_url": "https://github.com/4l3j0Ok/my-links-web",
