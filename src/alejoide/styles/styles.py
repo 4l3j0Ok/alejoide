@@ -7,11 +7,10 @@ from alejoide.modules.utils import hex_to_rgba
 
 STYLESHEETS = [
     f"https://fonts.googleapis.com/css?family={Font.DEFAULT.value}&display=swap"
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 ]
 
 BASE = {
-    "font_family": Font.DEFAULT.value,
+    "font_family": f"{Font.DEFAULT.value} !important",
     "font_size": Size.NORMAL.value,
     "color": colors.Text.PRIMARY.value,
     "background": colors.Main.PRIMARY.value,
@@ -44,7 +43,7 @@ BASE = {
         }
     },
     rx.Heading: {
-        "font_family": Font.DEFAULT.value,
+        "font_family": f"{Font.DEFAULT.value} !important",
         "margin_y": Size.NORMAL.value,
     },
     rx.Button: {
@@ -55,8 +54,8 @@ BASE = {
         }
     },
     rx.Image: {
-        "pointer-events": "none",
-        "user-select": "none",
+        "pointerEvents": "none",
+        "userSelect": "none",
     },
 }
 
@@ -83,7 +82,7 @@ NAVBAR = {
         "to": {
             "font_size": Size.SMALL.value,
             "background": hex_to_rgba(colors.Main.SECONDARY.value, 0.8),
-            "backdrop-filter": "blur(5px)",
+            "backdropFilter": "blur(5px)",
         }
     },
     "z_index": 2,
