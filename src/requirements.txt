@@ -1,2 +1,2 @@
-reflex==0.3.7
+reflex[all]==0.3.9
 yagmail[all]==0.15.293
