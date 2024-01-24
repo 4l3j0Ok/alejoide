@@ -109,7 +109,7 @@ FORM_COMPONENTS = {
     "padding_y": Size.NORMAL.value,
 }
 
-ABOUT_ME_CARDS = {	
+SCALE = {	
     "transition": "transform 0.2s ease-in-out",
     "transition_delay": "0.2s",
     ":hover": {

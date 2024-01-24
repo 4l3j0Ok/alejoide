@@ -41,7 +41,7 @@ def about_me() -> rx.Component:
                     "Mis áreas de trabajo",
                     size="lg",
                 ),
-                cards(style=styles.ABOUT_ME_CARDS),
+                cards(),
             )
         ),
         id="about_me",
