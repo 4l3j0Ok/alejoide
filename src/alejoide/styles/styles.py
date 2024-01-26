@@ -18,7 +18,7 @@ BASE = {
         "background": colors.Main.ACCENT.value,
         "color": colors.Text.SECONDARY.value,
     },
-    "::moz-selection": {
+    "::moz_selection": {
         "background": colors.Main.ACCENT.value,
         "color": colors.Text.SECONDARY.value,
     },
@@ -81,7 +81,7 @@ NAVBAR = {
     "@keyframes minimize": {
         "to": {
             "font_size": Size.SMALL.value,
-            "background": hex_to_rgba(colors.Main.SECONDARY.value, 0.8),
+            "background": hex_to_rgba(colors.Main.TERCEARY.value, 0.8),
             "backdropFilter": "blur(5px)",
         }
     },

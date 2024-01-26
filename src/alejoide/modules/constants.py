@@ -93,7 +93,7 @@ class Projects(Enum):
             "description": [
                 "Mi web de links profesionales y personales.",
             ],
-            "image": "projects/my-links.png",
+            "image": "projects/my-links.jpg",
             "repo_url": "https://github.com/4l3j0Ok/my-links-web",
             "app_url": "https://links.alejoide.com",
         },
