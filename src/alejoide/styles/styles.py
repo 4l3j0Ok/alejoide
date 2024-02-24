@@ -22,12 +22,12 @@ BASE = {
         "background": colors.Main.ACCENT.value,
         "color": colors.Text.SECONDARY.value,
     },
-    rx.Card: {
+    rx.chakra.Card: {
         "box_shadow": f"5px 5px 5px {hex_to_rgba(colors.Main.SECONDARY.value, 0.2)}",
         "border": f"2px solid {hex_to_rgba(colors.Main.SECONDARY.value, 0.1)}",
         "height": "auto"
     },
-    rx.Flex: {
+    rx.chakra.Flex: {
         "width": "80%",
         "max_width": "1200px",
         "justify_content": "space-between",
@@ -35,25 +35,25 @@ BASE = {
         "flex_direction": ["column", "column", "columns", "row", "row"],
         "flex_wrap": "wrap",
     },
-    rx.Link: {
+    rx.chakra.Link: {
         "color": colors.Main.ACCENT.value,
         ":hover": {
             "color": colors.Text.PRIMARY.value,
             "text_decoration": "none",
         }
     },
-    rx.Heading: {
+    rx.chakra.Heading: {
         "font_family": f"{Font.DEFAULT.value} !important",
         "margin_y": Size.NORMAL.value,
     },
-    rx.Button: {
+    rx.chakra.Button: {
         "background_color": colors.Main.ACCENT.value,
         "color": colors.Text.SECONDARY.value,
         ":hover": {
             "background_color": colors.Main.TERCEARY.value,
         }
     },
-    rx.Image: {
+    rx.chakra.Image: {
         "pointerEvents": "none",
         "userSelect": "none",
     },

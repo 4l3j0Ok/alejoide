@@ -6,19 +6,19 @@ from alejoide.components import images
 
 
 def title() -> rx.Component:
-    return rx.box(
-        rx.text("Hola, soy"),
-        rx.text(
+    return rx.chakra.box(
+        rx.chakra.text("Hola, soy"),
+        rx.chakra.text(
             "Alejo Sarmiento",
             color=Text.ACCENT.value,
             font_weight="bold",
             font_size=Size.XXLARGE.value,
             white_space="nowrap",
         ),
-        rx.text(
-            rx.span("SRE", font_weight="semibold"),
-            rx.span(" y "),
-            rx.span("Desarrollador de software", font_weight="semibold")
+        rx.chakra.text(
+            rx.chakra.span("SRE", font_weight="semibold"),
+            rx.chakra.span(" y "),
+            rx.chakra.span("Desarrollador de software", font_weight="semibold")
         ),
         font_size=[
             Size.NORMAL.value,
@@ -31,8 +31,8 @@ def title() -> rx.Component:
 
 
 def header() -> rx.Component:
-    return rx.hstack(
-        rx.flex(
+    return rx.chakra.hstack(
+        rx.chakra.flex(
             title(),
             images.profile(
                 "./me.jpeg",

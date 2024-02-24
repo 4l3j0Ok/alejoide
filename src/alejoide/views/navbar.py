@@ -6,19 +6,19 @@ from alejoide.components.logo import logo
 
 
 def buttons(**args) -> rx.Component:
-    return rx.hstack(
-        rx.link("Inicio", href=Links.HOME.value),
-        rx.link("Sobre mí", href=Links.ABOUT.value),
-        rx.link("Proyectos", href=Links.PROJECTS.value),
-        rx.link("Contacto", href=Links.CONTACT.value),
+    return rx.chakra.hstack(
+        rx.chakra.link("Inicio", href=Links.HOME.value),
+        rx.chakra.link("Sobre mí", href=Links.ABOUT.value),
+        rx.chakra.link("Proyectos", href=Links.PROJECTS.value),
+        rx.chakra.link("Contacto", href=Links.CONTACT.value),
         gap=Size.LARGE.value,
         margin_top=[Size.NORMAL.value, Size.NORMAL.value, Size.NORMAL.value, 0],
     )
 
 
 def navbar() -> rx.Component:
-    return rx.hstack(
-        rx.flex(
+    return rx.chakra.hstack(
+        rx.chakra.flex(
             logo(),
             buttons()
         ),
