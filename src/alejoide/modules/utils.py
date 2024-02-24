@@ -21,7 +21,7 @@ def send_mail(form_data) -> bool:
     message += f"<p>{form_data['message']}</p>"
     try:
         yag.send(
-            to=Email.PUBLIC_ADDRESS.value,
+            to=Email.ADDRESS.value,
             subject=Email.SUBJECT.value,
             contents=message,
         )
