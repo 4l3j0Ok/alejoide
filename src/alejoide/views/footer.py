@@ -8,9 +8,9 @@ from alejoide.components.react.icons import iconify
 
 
 def icons():
-    return rx.hstack(
+    return rx.chakra.hstack(
         *[
-            rx.link(
+            rx.chakra.link(
                 iconify(item.get("icon")),
                 href=item.get("link"),
                 style=styles.DARK_LINKS,
@@ -23,11 +23,11 @@ def icons():
 
 
 def footer() -> rx.Component:
-    return rx.vstack(
+    return rx.chakra.vstack(
         logo(clickable=False),
-        rx.text(
+        rx.chakra.text(
             f"© 2023 - {date.today().year}" if date.today().year > 2023 else f"© 2023",
-            rx.link(
+            rx.chakra.link(
                 f" {App.NAME.value} by {App.AUTHOR.value} ",
                 href=Links.APP_URL.value,
                 color=styles.colors.Main.ACCENT.value,

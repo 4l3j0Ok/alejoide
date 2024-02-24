@@ -12,6 +12,7 @@ class App(Enum):
 
 class Email(Enum):
     ADDRESS = os.getenv("EMAIL_ADDRESS", "alejofsarmiento@gmail.com")
+    PUBLIC_ADDRESS = os.getenv("EMAIL_PUBLIC_ADDRESS", "contacto@alejoide.com")
     TOKEN = os.getenv("EMAIL_TOKEN", "token")
     SUBJECT = f"{App.NAME.value.upper()} | Contacto"
     MESSAGE_HEADER = "<h1>NUEVO CONTACTO</h1>"
@@ -24,7 +25,7 @@ class Links(Enum):
     CONTACT = "#contact"
     APP_URL = os.getenv("APP_URL", "https://alejoide.com")
     APP_REPO_URL = os.getenv("APP_REPO_URL", "https://github.com/4l3j0Ok/alejoide-web")
-    EMAIL = f"mailto:{Email.ADDRESS.value}"
+    EMAIL = f"mailto:{Email.PUBLIC_ADDRESS.value}"
 
 
 class GoogleAnalytics(Enum):

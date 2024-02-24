@@ -15,8 +15,8 @@ class Iconify(rx.Component):
         return component
 
 
-def iconify(icon: str, **args) -> rx.Span:
-    return rx.span(
+def iconify(icon: str, **args) -> rx.chakra.Span:
+    return rx.chakra.span(
         Iconify().create(icon),
         display="inline-block",
         vertical_align="middle",

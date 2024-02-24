@@ -12,16 +12,16 @@ from alejoide.modules.constants import App, GoogleAnalytics
 
 @rx.page(route="/", title=App.NAME.value, description=App.DESCRIPTION.value)
 def index() -> rx.Component:
-    return rx.box(
+    return rx.chakra.box(
         navbar(),
         header(),
-        rx.spacer(height=Size.XXXLARGE.value),
+        rx.chakra.spacer(height=Size.XXXLARGE.value),
         about_me(),
-        rx.spacer(height=Size.XXXLARGE.value),
+        rx.chakra.spacer(height=Size.XXXLARGE.value),
         projects(),
-        rx.spacer(height=Size.XXXLARGE.value),
+        rx.chakra.spacer(height=Size.XXXLARGE.value),
         contact(),
-        rx.spacer(height=Size.XXXLARGE.value),
+        rx.chakra.spacer(height=Size.XXXLARGE.value),
         footer(),
     )
 

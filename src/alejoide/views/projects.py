@@ -14,14 +14,14 @@ def add_button(
         is_disabled: bool = False
     ):
     buttons.append(
-        rx.link(
+        rx.chakra.link(
             button(
-                rx.text(
+                rx.chakra.text(
                     iconify(
                         icon,
                         margin_right=Size.SMALL.value
                     ),
-                    rx.span(text),
+                    rx.chakra.span(text),
                 ),
                 width="100%",
                 is_disabled=is_disabled
@@ -60,8 +60,8 @@ def cards(**args) -> rx.Component:
                 buttons=buttons
             )
         )
-    return rx.responsive_grid(
-        *[rx.box(card, **args) for card in cards],
+    return rx.chakra.responsive_grid(
+        *[rx.chakra.box(card, **args) for card in cards],
         columns=[1, 1, 2, 2, 2],
         spacing=Size.XLARGE.value,
         )
@@ -69,12 +69,12 @@ def cards(**args) -> rx.Component:
 
 
 def projects() -> rx.Component:
-    return rx.vstack(
-        rx.flex(
-            rx.box(
-                rx.heading("Proyectos"),
-                rx.box(
-                    *[rx.text(line) for line in Projects.DESCRIPTION.value],
+    return rx.chakra.vstack(
+        rx.chakra.flex(
+            rx.chakra.box(
+                rx.chakra.heading("Proyectos"),
+                rx.chakra.box(
+                    *[rx.chakra.text(line) for line in Projects.DESCRIPTION.value],
                     margin_bottom=Size.LARGE.value,
                 ),
             ),
