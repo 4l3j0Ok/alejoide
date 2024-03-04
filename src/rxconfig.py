@@ -4,5 +4,5 @@ import reflex as rx
 
 config = rx.Config(
     app_name="alejoide",
-    api_url=os.getenv("API_URL", "http://localhost:8000")
+    cors_allowed_origins=[os.getenv("APP_URL", "http://localhost:3000")]
 )
