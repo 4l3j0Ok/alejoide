@@ -14,6 +14,7 @@ BASE = {
     "font_size": Size.NORMAL.value,
     "color": colors.Text.PRIMARY.value,
     "background": colors.Main.PRIMARY.value,
+    "scroll_behavior": "smooth",
     "::selection": {
         "background": colors.Main.ACCENT.value,
         "color": colors.Text.SECONDARY.value,
