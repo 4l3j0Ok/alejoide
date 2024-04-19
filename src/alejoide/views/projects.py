@@ -7,27 +7,20 @@ from alejoide.components.react.icons import iconify
 
 
 def add_button(
-        buttons: list,
-        text: str,
-        url: str,
-        icon: str,
-        is_disabled: bool = False
-    ):
+    buttons: list, text: str, url: str, icon: str, is_disabled: bool = False
+):
     buttons.append(
         rx.chakra.link(
             button(
                 rx.chakra.text(
-                    iconify(
-                        icon,
-                        margin_right=Size.SMALL.value
-                    ),
+                    iconify(icon, margin_right=Size.SMALL.value),
                     rx.chakra.span(text),
                 ),
                 width="100%",
-                is_disabled=is_disabled
+                is_disabled=is_disabled,
             ),
             href=url,
-            is_external=True
+            is_external=True,
         )
     )
 
@@ -41,7 +34,7 @@ def cards(**args) -> rx.Component:
                 buttons,
                 text=Projects.GITHUB_BUTTON.value["text"],
                 url=item.get("repo_url"),
-                icon=Projects.GITHUB_BUTTON.value["icon"]
+                icon=Projects.GITHUB_BUTTON.value["icon"],
             )
         if item.get("app_url"):
             add_button(
@@ -49,7 +42,7 @@ def cards(**args) -> rx.Component:
                 text=Projects.APP_BUTTON.value["text"],
                 url=item.get("app_url"),
                 icon=Projects.APP_BUTTON.value["icon"],
-                is_disabled=item.get("is_disabled", False)
+                is_disabled=item.get("is_disabled", False),
             )
         cards.append(
             card_with_image(
@@ -57,15 +50,14 @@ def cards(**args) -> rx.Component:
                 title=item.get("title"),
                 icons=item.get("icons"),
                 image=item.get("image"),
-                buttons=buttons
+                buttons=buttons,
             )
         )
     return rx.chakra.responsive_grid(
         *[rx.chakra.box(card, **args) for card in cards],
         columns=[1, 1, 2, 2, 2],
         spacing=Size.XLARGE.value,
-        )
-
+    )
 
 
 def projects() -> rx.Component:
@@ -74,11 +66,14 @@ def projects() -> rx.Component:
             rx.chakra.box(
                 rx.chakra.heading("Proyectos"),
                 rx.chakra.box(
-                    *[rx.chakra.text(line) for line in Projects.DESCRIPTION.value],
+                    *[
+                        rx.chakra.text(line, margin_top=Size.NORMAL.value)
+                        for line in Projects.DESCRIPTION.value
+                    ],
                     margin_bottom=Size.LARGE.value,
                 ),
             ),
-            cards()
+            cards(),
         ),
-        id="projects"
+        id="projects",
     )

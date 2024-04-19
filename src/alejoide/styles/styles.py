@@ -26,13 +26,13 @@ BASE = {
     rx.chakra.Card: {
         "box_shadow": f"5px 5px 5px {hex_to_rgba(colors.Main.SECONDARY.value, 0.2)}",
         "border": f"2px solid {hex_to_rgba(colors.Main.SECONDARY.value, 0.1)}",
-        "height": "auto"
+        "height": "auto",
     },
     rx.chakra.Flex: {
         "width": "80%",
         "max_width": "1200px",
         "justify_content": "space-between",
-        "align_items":"center",
+        "align_items": "center",
         "flex_direction": ["column", "column", "columns", "row", "row"],
         "flex_wrap": "wrap",
     },
@@ -41,7 +41,7 @@ BASE = {
         ":hover": {
             "color": colors.Text.PRIMARY.value,
             "text_decoration": "none",
-        }
+        },
     },
     rx.chakra.Heading: {
         "font_family": f"{Font.DEFAULT.value} !important",
@@ -52,12 +52,14 @@ BASE = {
         "color": colors.Text.SECONDARY.value,
         ":hover": {
             "background_color": colors.Main.TERCEARY.value,
-        }
+        },
     },
     rx.chakra.Image: {
         "pointerEvents": "none",
         "userSelect": "none",
     },
+    rx.chakra.Input: {"margin_y": Size.SMALL.value},
+    rx.chakra.text_area: {"margin_y": Size.SMALL.value},
 }
 
 DARK_LINKS = {
@@ -70,10 +72,12 @@ DARK_LINKS = {
 
 NAVBAR = {
     "background": colors.Main.TERCEARY.value,
-    "text_align": "center",
+    "width": "100%",
     "justify_content": "center",
+    "align_items": "center",
+    "text_align": "center",
     "padding_y": Size.LARGE.value,
-    "position": "sticky",
+    "position": "fixed",
     "top": 0,
     "animation": "minimize linear both",
     "animation_timeline": "scroll(root)",
@@ -90,7 +94,8 @@ NAVBAR = {
 }
 
 HEADER = {
-    "height": "95vh",
+    "height": "100vh",
+    "align_items": "center",
     "justify_content": "center",
     "background": colors.Header.PRIMARY.value,
     "color": colors.Text.SECONDARY.value,
@@ -110,10 +115,10 @@ FORM_COMPONENTS = {
     "padding_y": Size.NORMAL.value,
 }
 
-SCALE = {	
+SCALE = {
     "transition": "transform 0.2s ease-in-out",
     "transition_delay": "0.2s",
     ":hover": {
-        "transform": f"scale(1.05)",
-    }
+        "transform": "scale(1.05)",
+    },
 }
