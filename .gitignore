@@ -50,9 +50,9 @@
 # pyenv
 # pytype static type analyzer
 #.idea/
-#Pipfile.lock
-#pdm.lock
-#poetry.lock
+Pipfile.lock
+pdm.lock
+poetry.lock
 *$py.class
 *.cover
 *.db
