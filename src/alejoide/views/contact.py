@@ -37,7 +37,6 @@ class FormState(rx.State):
         return self.name and len(self.name) < 3
 
 
-
 def form() -> rx.chakra.Form:
     return rx.chakra.form(
         rx.chakra.hstack(
@@ -45,7 +44,7 @@ def form() -> rx.chakra.Form:
                 forms.input(
                     key="name",
                     label="Nombre",
-                    placeholder="Tu nombre",
+                    placeholder="John Doe",
                     on_blur=FormState.set_name,
                     is_disabled=(FormState.sent | FormState.loading),
                 ),
@@ -60,16 +59,16 @@ def form() -> rx.chakra.Form:
                 forms.input(
                     key="email",
                     label="Correo electrónico",
-                    placeholder="Tu correo electrónico",
+                    placeholder="johndoe@mail.com",
                     on_blur=FormState.set_email,
-                    is_disabled=(FormState.sent | FormState.loading)
+                    is_disabled=(FormState.sent | FormState.loading),
                 ),
                 rx.cond(
                     FormState.is_email_invalid,
                     rx.chakra.form_error_message("Ingresa un email válido."),
                 ),
                 is_invalid=FormState.is_email_invalid,
-                is_required=True
+                is_required=True,
             ),
             align_items="flex-start",
         ),
@@ -77,11 +76,11 @@ def form() -> rx.chakra.Form:
             forms.text_area(
                 key="message",
                 label="Mensaje",
-                placeholder="Escribí tu mensaje acá",
+                placeholder="Me gustaría contactarte para...",
                 is_disabled=(FormState.sent | FormState.loading),
-                on_blur=FormState.set_message
+                on_blur=FormState.set_message,
             ),
-            is_required=True
+            is_required=True,
         ),
         button(
             FormState.submit_label,
@@ -89,7 +88,7 @@ def form() -> rx.chakra.Form:
             is_loading=FormState.loading,
             is_disabled=FormState.sent,
             margin_top=Size.NORMAL.value,
-            width="100%"
+            width="100%",
         ),
         on_submit=FormState.send,
     )
@@ -100,7 +99,9 @@ def contact() -> rx.Component:
         rx.chakra.flex(
             rx.chakra.box(
                 rx.chakra.heading("Contacto"),
-                rx.chakra.text("Si querés contactarme, podés hacerlo a través de este formulario."),
+                rx.chakra.text(
+                    "Si querés contactarme, podés hacerlo a través de este formulario."
+                ),
             ),
         ),
         rx.chakra.flex(
@@ -115,7 +116,7 @@ def contact() -> rx.Component:
                 rx.chakra.link(
                     Email.PUBLIC_ADDRESS.value,
                     href=Links.EMAIL.value,
-                )
+                ),
             )
         ),
         id="contact",

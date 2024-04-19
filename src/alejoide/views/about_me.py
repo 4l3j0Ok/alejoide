@@ -5,13 +5,17 @@ from alejoide.components.cards import card
 from alejoide.styles import styles
 
 
-
 def cards(**args) -> rx.Component:
     cards = []
     for item in AboutMe.CARDS.value:
         cards.append(
             card(
-                description=rx.chakra.box(*[rx.chakra.text(line) for line in item.get("description", "")]),
+                description=rx.chakra.box(
+                    *[
+                        rx.chakra.text(line, margin_top=Size.NORMAL.value)
+                        for line in item.get("description", "")
+                    ]
+                ),
                 title=item.get("title"),
                 icons=item.get("icons"),
             )
@@ -20,7 +24,7 @@ def cards(**args) -> rx.Component:
         *[rx.chakra.box(card, **args) for card in cards],
         columns=[1, 1, 1, 2, 2],
         spacing=Size.LARGE.value,
-        )
+    )
 
 
 def about_me() -> rx.Component:
@@ -31,7 +35,10 @@ def about_me() -> rx.Component:
                     "Sobre mí",
                 ),
                 rx.chakra.box(
-                    *[rx.chakra.text(line) for line in AboutMe.DESCRIPTION.value],
+                    *[
+                        rx.chakra.text(line, margin_top=Size.NORMAL.value)
+                        for line in AboutMe.DESCRIPTION.value
+                    ],
                 ),
             ),
         ),
