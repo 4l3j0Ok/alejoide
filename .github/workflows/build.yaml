@@ -1,9 +1,8 @@
 name: build
 on:
-  workflow_run:
-    workflows: ["tag"]
-    types:
-      - completed
+  push:
+    tags:
+      - "v*"
 jobs:
   build:
     name: Build and push
