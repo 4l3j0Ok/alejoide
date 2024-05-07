@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-reflex = "*"
+reflex = "==0.4.8"
 yagmail = "==0.15.293"
 
 [dev-packages]

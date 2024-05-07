@@ -28,6 +28,7 @@ def index() -> rx.Component:
 app = rx.App(
     style=styles.BASE,
     stylesheets=styles.STYLESHEETS,
+    html_custom_attrs={"className": "!scroll-smooth"},
     head_components=[
         rx.script(src=GoogleAnalytics.INIT_SCRIPT_URL.value),
         rx.script(GoogleAnalytics.SEND_DATA_SCRIPT.value),
