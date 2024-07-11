@@ -137,8 +137,8 @@ class Projects(Enum):
 
 class Footer(Enum):
     ICONS = [
-        {"icon": "fa-brands:instagram", "link": "https://instagram.com/4l3j0"},
-        {"icon": "fa-brands:twitter", "link": "https://twitter.com/alejoide_"},
+        # {"icon": "fa-brands:instagram", "link": "https://instagram.com/4l3j0"},
+        # {"icon": "fa-brands:twitter", "link": "https://twitter.com/alejoide_"},
         {"icon": "fa-brands:github", "link": "https://github.com/4l3j0Ok"},
         {"icon": "fa-brands:linkedin", "link": "https://www.linkedin.com/in/alejoide"},
         {"icon": "tabler:mail-filled", "link": Links.EMAIL.value, "new_tab": False},
