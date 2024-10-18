@@ -9,10 +9,12 @@
 [![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 [![Github Actions](https://img.shields.io/badge/Actions-white?style=for-the-badge&logo=github&logoColor=black)](https://github.com/features/actions)
 
-
-[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/alejoide/alejoide-web)](https://hub.docker.com/r/alejoide/alejoide-web) [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/alejoide/alejoide-web)](https://hub.docker.com/r/alejoide/alejoide-web)
-
 </div>
+
+<!-- Note: -->
+
+> [!IMPORTANT]
+> Este proyecto ya no se encuentra en desarrollo ni se le dará mantenimiento activo. La continuación de este proyecto se encuentra en [4l3j0Ok/alejoide-web](https://github.com/4l3j0Ok/alejoide-web) y está desarrollado con [Astro](https://astro.build).
 
 ## Introducción
 
