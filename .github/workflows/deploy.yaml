@@ -5,11 +5,6 @@ on:
     workflows: ["build"]
     types:
       - completed
-  push:
-    branches:
-      - main
-    paths:
-      - 'stack/**'
 
 jobs:
   deploy:
